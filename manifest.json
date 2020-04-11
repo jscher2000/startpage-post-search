@@ -1,0 +1,29 @@
+{
+	"name": "Startpage.com POST Search",
+	"description": "Basic Startpage.com search add-on that uses the POST method for extra privacy. No search engine suggestions are retrieved. NOT an official Startpage add-on.",
+	"version": "0.1",
+	"manifest_version": 2,
+	"applications":{
+		"gecko": {
+			"id": "startpage-post-search@jeffersonscher.com",
+			"strict_min_version": "64.0"
+		}
+	},
+	"developer": {
+		"name": "Jefferson \"jscher2000\" Scher",
+		"url": "https://github.com/jscher2000/"
+	},
+	"icons": {
+		"64": "sp-icon-post.png"
+	},
+	"web_accessible_resources": [
+		"sp-icon-post.png"
+	],
+	"chrome_settings_overrides": {
+		"search_provider": {
+			"name": "Startpage.com POST",
+			"search_url": "https://www.startpage.com/do/search",
+			"search_url_post_params": "cmd=process_search&cat=web&engine0=v1all&query={searchTerms}"
+		}
+	}
+}
